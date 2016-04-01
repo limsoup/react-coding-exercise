@@ -5,13 +5,6 @@ export default class RootView extends React.Component {
     children: React.PropTypes.any
   }
 
-  /**
-   * Navigates to the Fish Route
-   */
-  goToFish () {
-    this.context.router.push('/fish');
-  }
-
   render () {
     return (
       <div>
