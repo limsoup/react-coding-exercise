@@ -1,0 +1,39 @@
+{
+  "name": "react-coding-exercise",
+  "version": "1.0.0",
+  "description": "A basic coding exercise for GasStationTV",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "rwb serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GasStationTV/react-coding-exercise.git"
+  },
+  "keywords": [
+    "gasstationtv",
+    "react"
+  ],
+  "author": "gasstationtv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GasStationTV/react-coding-exercise/issues"
+  },
+  "homepage": "https://github.com/GasStationTV/react-coding-exercise#readme",
+  "dependencies": {
+    "react": "0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "eslint": "^2.5.3",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
+    "react-router": "2.0.1"
+  },
+  "react": {
+    "routes": "./routes.js",
+    "rwb": "0.0.19"
+  }
+}
