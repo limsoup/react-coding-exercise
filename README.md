@@ -54,6 +54,13 @@ We are asking you to build out a sample application using the Github API. The fo
     - Follower List
     - Repo List
 
+## Technology
+We ask that you use the same technology that we use on a daily basis. This includes
+- React
+- JSX
+- ES6+
+- Bootstrap
+- Redux
 
 ## Setup
 
