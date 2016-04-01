@@ -1,4 +1,20 @@
 # react-coding-exercise
+## Setup
+
+To get started, you will need to globally install [rwb](https://github.com/petehunt/rwb). This is a simple global tool to run and serve this application.
+
+`npm install -g git+https://github.com/petehunt/rwb`
+
+Run an npm install.
+
+`npm install`
+
+
+The application is already setup with some basic files and can be run simply with the start script.
+
+ `npm run start`.
+
+ This will serve the application at `localhost:3000`.
 
 ## Version Control
 ### GitFlow and GithubFlow
