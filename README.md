@@ -31,6 +31,9 @@ We try to follow the [Airbnb style guide](https://github.com/airbnb/javascript a
 ### Unit Testing
 Please feel free to create unit tests - we use [Mocha](https://github.com/mochajs/mocha).
 
+## Styling
+We use a modified version of Bootstrap for our styles and have been experimenting with the alpha release of Bootstrap 4.
+
 ## Sass
 ### On Node Sass
 We rely on Node Sass to compile our stylesheets because of its speed. However, because there is not currently feature parity between Ruby Sass and LibSass not all documented features are supported. Hugo Giraudel's [Sass Compatibility](http://sass-compatibility.github.io/) project is the best way to identify these differences. @acolson spends way too much time following this.
