@@ -26,7 +26,7 @@ Please fork our repository and use a feature branch workflow while developing yo
 
 ## JavaScript
 ### Standards
-We try to follow the [Airbnb style guide](https://github.com/airbnb/javascript as much as possible. We don't expect you to strictly adhere to these standards, but they may help provide insight into how our JavaScript is generally structured.
+We try to follow the [Airbnb style guide](https://github.com/airbnb/javascript) as much as possible. We don't expect you to strictly adhere to these standards, but they may help provide insight into how our JavaScript is generally structured.
 
 ### Unit Testing
 Please feel free to create unit tests - we use [Mocha](https://github.com/mochajs/mocha).
