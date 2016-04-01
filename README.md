@@ -1,4 +1,60 @@
-# react-coding-exercise
+# GSTV React Coding Exercise
+## Overview
+We are asking you to build out a sample application using the Github API. The following simulates the kind of requirements that our developers are given - minus wireframes.
+
+### Filter - User Search
+- Format
+  - Search Box
+   - Input
+- Functionality
+  - Search Box
+   - Debounces requests to avoid spamming User Search API
+   - Minimum of 3 characters
+
+### List - Search Results
+- Format
+  - Normal State
+    - Displayed below Filter - User Search
+    - For each Result
+     - Gravatar Image
+     - Github Username
+     - Detail Icon
+  - Empty State
+    - Messages
+      - If the search query returns no results
+        - Your search returned no results. Please search for another user.
+- Functionality
+  - Profile Icon
+    - Links to Detail - User view for selected user
+
+### Detail - User
+- Format
+  - Normal State
+    - Gravatar Image
+    - Github Username
+    - Name
+    - Company
+      - Empty State
+        - Do not display if not returned
+    - Blog
+      - Empty State
+        - Do not display if not returned
+    - Location
+      - Empty State
+        - Do not display if not returned
+    - Email
+      - Empty State
+        - Do not display if not returned
+      - Email should display as a mailto link
+    - Bio
+      - Empty State
+        - Do not display if not returned
+    - Account Creation
+      - Display in human readable format
+    - Follower List
+    - Repo List
+
+
 ## Setup
 
 To get started, you will need to globally install [rwb](https://github.com/petehunt/rwb). This is a simple global tool to run and serve this application.
