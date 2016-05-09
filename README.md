@@ -64,9 +64,9 @@ We ask that you use the same technology that we use on a daily basis. This inclu
 
 ## Setup
 
-To get started, you will need to globally install [rwb](https://github.com/petehunt/rwb). This is a simple global tool to run and serve this application.
+To get started, you will need to globally install [rwb](https://github.com/petehunt/rwb). This is a simple global tool to run and serve this application. Keep in mind this exercise works with v0.0.19 (latest stable since our last tests).
 
-`npm install -g git+https://github.com/petehunt/rwb`
+`npm install -g rwb`
 
 Run an npm install.
 
