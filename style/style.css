@@ -1,0 +1,54 @@
+img.thumbnail-avatar {
+	max-width: 128px;
+	max-height: 128px;
+}
+
+.main-component {
+	margin-top: 20px;
+}
+
+.media:hover {
+	background-color: #EEE;
+}
+
+.media.selected {
+	background-color: #D8D8D8;
+}
+
+.media {
+	padding: 7px;
+}
+
+img.detail-avatar {
+	max-width: 100%;
+}
+
+.detail-icon {
+	margin: 13px;
+	display: inline-block;
+	float: right;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+[class*=icono-] {
+	margin-right: 15px;
+}
+
+.card-line {
+	margin-top: 8px;
+	font-size: 14px;
+}
+.card-line :not([class*=icono-]) {
+	padding-top: 8px;
+	float: right;
+}
+.card-date-line{
+	margin-top: 8px;
+	text-align: right;
+	font-size: 14px;
+}
+.repo {
+	margin: 10px auto;
+	border-bottom: 1px solid #CCC;
+}
