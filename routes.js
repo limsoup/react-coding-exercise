@@ -4,6 +4,7 @@ import { Route , IndexRoute}     from 'react-router';
 import FilterView  from './views/FilterView';
 import HomeView  from './views/RootView';
 import FishView  from './views/FishView';
+import UserDetail from './components/user_detail';
 import './bootstrap/dist/css/bootstrap.min.css';
 import './style/icono.min.css';
 import './style/style.css';
@@ -20,7 +21,10 @@ import './style/style.css';
 const routes = (
   <Route path="/" component={HomeView} >
     <IndexRoute component={FilterView} />
+    <Route path="fishes" component={FishView} />
+    <Route path="detail/:userid" component={UserDetail} />
   </Route>
 );
+
 
 export default routes;

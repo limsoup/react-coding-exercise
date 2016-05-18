@@ -3,7 +3,9 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import axios from 'axios'
 import _ from 'lodash'
+import {browserHistory} from 'react-router'
 
+import {getUserDetail} from '../actions/user_detail'
 
 class ResultsList extends React.Component {
 
@@ -23,6 +25,7 @@ class ResultsList extends React.Component {
   }
   onUserSelect(login){
     this.props.getUserDetail(login);
+    browserHistory.push(`/detail/${login}`);
   }
   renderUsers(){
     if(this.props.users && this.props.users.length > 0){
@@ -48,18 +51,18 @@ class ResultsList extends React.Component {
   }
 }
 
-const BASE_URL_DETAIL = "http://api.github.com/users";
 
-function getUserDetail(login){
-  const user = axios.get(`${BASE_URL_DETAIL}/${login}`);
-  const followers = axios.get(`${BASE_URL_DETAIL}/${login}/followers`);
-  const repos = axios.get(`${BASE_URL_DETAIL}/${login}/repos`);
-  //console.log(request);
-  return {
-    type: 'GET_USER_DETAIL',
-    payload: Promise.all([user, followers, repos])
-  };
-}
+// const BASE_URL_DETAIL = "http://api.github.com/users";
+// function getUserDetail(login){
+//   const user = axios.get(`${BASE_URL_DETAIL}/${login}`);
+//   const followers = axios.get(`${BASE_URL_DETAIL}/${login}/followers`);
+//   const repos = axios.get(`${BASE_URL_DETAIL}/${login}/repos`);
+//   //console.log(request);
+//   return {
+//     type: 'GET_USER_DETAIL',
+//     payload: Promise.all([user, followers, repos])
+//   };
+// }
 
 function mapStateToProps({users, selectedUser}) {
   return {users, selectedUser};

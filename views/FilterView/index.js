@@ -16,14 +16,9 @@ import ResultsList from '../../components/results_list';
 export default class FilterView extends React.Component{
 	render(){
 		return (
-
-	        <div className="container-fluid">
-	          <div className="row">
-	            <div className="col-lg-4 col-lg-offset-4">
-	              <SearchBar />
-	              <ResultsList />
-	            </div>
-	          </div>
+	        <div className="col-lg-4 col-lg-offset-4">
+	          <SearchBar />
+	          <ResultsList />
 	        </div>
 		);
 	}

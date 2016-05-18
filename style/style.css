@@ -52,3 +52,9 @@ img.detail-avatar {
 	margin: 10px auto;
 	border-bottom: 1px solid #CCC;
 }
+
+nav a {
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;
+}

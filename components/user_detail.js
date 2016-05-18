@@ -1,35 +1,32 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import axios from 'axios'
-import FontAwesome from 'react-fontawesome';
+import {Router} from 'react-router'
+import {bindActionCreators} from 'redux'
+//import FontAwesome from 'react-fontawesome';
 //import {FaIcon, FaStack } from 'react-fa-icon';
+import {getUserDetail} from '../actions/user_detail'
+
 
 class UserDetail extends React.Component {
+  static contextTypes = {
+    router: React.PropTypes.object
+  }
 
+  componentDidMount(){
+    console.log(this.props.params);
+    if(this.props.params.userid){
+      this.props.getUserDetail(this.props.params.userid);
+    }
+  }
   render () {
+
     if(this.props.selectedUser){
       const u = this.props.selectedUser;
       return (
-        <div className="col-lg-8 main-component">
+        <div className="col-lg-10 col-lg-offset-2 main-component">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-8">
-                {u.bio ? (<div className="row">
-                  <h2>About Me</h2>
-                  <div>{u.bio}</div>
-                  <hr/>
-                </div>) : null}
-                <div className="row">
-                  <div className="col-lg-6">
-                    <h2>Followers</h2>
-                    <div>{this.renderFollowers()}</div>
-                  </div>
-                  <div className="col-lg-6">
-                    <h2>Repositories</h2>
-                    <div>{this.renderRepositories()}</div>
-                  </div>
-                </div>
-              </div>
               <div className="col-lg-4">
                 <div className="card">
                   <img className="card-img-top detail-avatar" src={u.avatar_url} />
@@ -48,6 +45,23 @@ class UserDetail extends React.Component {
                   </div>
                 </div>
               </div>
+              <div className="col-lg-8">
+                {u.bio ? (<div className="row">
+                  <h2>About Me</h2>
+                  <div>{u.bio}</div>
+                  <hr/>
+                </div>) : null}
+                <div className="row">
+                  <div className="col-lg-6">
+                    <h2>Followers</h2>
+                    <div>{this.renderFollowers()}</div>
+                  </div>
+                  <div className="col-lg-6">
+                    <h2>Repositories</h2>
+                    <div>{this.renderRepositories()}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -61,6 +75,7 @@ class UserDetail extends React.Component {
     }
   }
   renderRepositories(){
+    console.log('rendering repos');
     function hashCode(str) { // java String#hashCode
         var hash = 0;
         for (var i = 0; i < str.length; i++) {
@@ -117,4 +132,10 @@ function mapStateToProps({selectedUser}) {
 }
 
 
-export default connect(mapStateToProps)(UserDetail);
+function mapActionsToProps(dispatch){
+  return bindActionCreators({getUserDetail}, dispatch);
+}
+
+export default connect(mapStateToProps,mapActionsToProps)(UserDetail);
+
+
